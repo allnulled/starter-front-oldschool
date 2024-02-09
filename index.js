@@ -7,19 +7,24 @@ const main = async function() {
 
     // VUEJS Y COMPAÑEROS:
     await Sistema_de_modulos.cargar_script(envvars.NODE_ENV === "test" ? "lib/vue2/vue2.js" : "lib/vue2/vue2.min.js");
-    await Sistema_de_modulos.cargar_script("lib/vue-router/vue-router.js");
-    await Sistema_de_modulos.cargar_script("lib/vue-i18n/vue-i18n.js");
+    await Sistema_de_modulos.cargar_script("lib/externos/vue-router/vue-router.js");
+    await Sistema_de_modulos.cargar_script("lib/externos/vue-i18n/vue-i18n.js");
 
     // OTRAS LIBRERÍAS DE TERCEROS:
-    await Sistema_de_modulos.cargar_script("lib/jquery/jquery.js");
-    await Sistema_de_modulos.cargar_script("lib/jquery-ui/jquery-ui.js");
-
+    await Sistema_de_modulos.cargar_script("lib/externos/jquery/jquery.js");
+    await Sistema_de_modulos.cargar_script("lib/externos/jquery-ui/jquery-ui.js");
+    await Sistema_de_modulos.cargar_script("lib/externos/ejs/ejs.js");
+    await Sistema_de_modulos.cargar_script("lib/externos/socket.io/socket.io.js");
+    
     // LÓGICAS:
     await Sistema_de_modulos.cargar_script("lib/sistema_de_hooks/sistema_de_hooks.js");
     await Sistema_de_modulos.cargar_script("lib/sistema_de_aleatorizacion/sistema_de_aleatorizacion.js");
     await Sistema_de_modulos.cargar_script("lib/sistema_de_base_de_datos_indexeddb/sistema_de_base_de_datos_indexeddb.js");
     await Sistema_de_modulos.cargar_script("lib/sistema_de_fechas/sistema_de_fechas.js");
     await Sistema_de_modulos.cargar_script("lib/sistema_de_almacenamiento_sincronizable/sistema_de_almacenamiento_sincronizable.js");
+    await Sistema_de_modulos.cargar_script("lib/sistema_de_plantillas/sistema_de_plantillas.js");
+    await Sistema_de_modulos.cargar_script("lib/sistema_de_dialogos/sistema_de_dialogos.js");
+    await Sistema_de_modulos.cargar_script("lib/sistema_de_refresco_automatico/sistema_de_refresco_automatico.js");
     await Sistema_de_modulos.cargar_script("lib/utilidades_de_texto/utilidades_de_texto.js");
     await Sistema_de_modulos.cargar_script("lib/rutas/rutas.js");
     await Sistema_de_modulos.cargar_script("lib/traducciones/traducciones.js");
@@ -43,9 +48,13 @@ const main = async function() {
     await Sistema_de_modulos.cargar_script("lib/vue2/componentes/reusables/mi_title/mi_title.js");
     await Sistema_de_modulos.cargar_script_como_texto("lib/vue2/componentes/no_reusables/app/app.js");
     await Sistema_de_modulos.cargar_script_como_texto("lib/vue2/componentes/no_reusables/pagina_de_inicio/pagina_de_inicio.js");
+    await Sistema_de_modulos.cargar_script_como_texto("lib/vue2/componentes/no_reusables/mis_dialogos/mis_dialogos.js");
 
     // ESTILOS:
-    await Sistema_de_modulos.cargar_estilo("lib/win7/win7.css");
+    await Sistema_de_modulos.cargar_estilo("lib/externos/win7/win7.css");
+    await Sistema_de_modulos.cargar_script("lib/aplicacion/estilos/variables.js");
+    await Sistema_de_modulos.cargar_estilo_dinamico("lib/aplicacion/estilos/framework.jcss");
+    await Sistema_de_modulos.cargar_estilo_dinamico("lib/aplicacion/estilos/aplicacion.jcss");
     await Sistema_de_modulos.cargar_estilo("lib/vue2/componentes/reusables/mi_button/mi_button.css");
     await Sistema_de_modulos.cargar_estilo("lib/vue2/componentes/reusables/mi_checkbox/mi_checkbox.css");
     await Sistema_de_modulos.cargar_estilo("lib/vue2/componentes/reusables/mi_datepicker/mi_datepicker.css");
@@ -65,10 +74,14 @@ const main = async function() {
     await Sistema_de_modulos.cargar_estilo("lib/vue2/componentes/no_reusables/app/app.css");
     await Sistema_de_modulos.cargar_estilo("lib/vue2/componentes/no_reusables/pagina_de_inicio/pagina_de_inicio.css");
     
-    // INICIO:
+    // MÓDULOS DE INICIO:
+    await Sistema_de_modulos.cargar_script("lib/traducciones/traducciones.js");
     await Sistema_de_modulos.cargar_script("lib/externos/externos.js");
     await Sistema_de_modulos.cargar_script("lib/aplicacion/aplicacion.js");
-
+    
+    // ARRANQUE:
+    await Sistema_de_modulos.cargar_modulo("lib/sistema_de_dialogos");
+    await Sistema_de_modulos.cargar_modulo("lib/sistema_de_refresco_automatico");
     await Sistema_de_modulos.cargar_modulo("lib/aplicacion");
 
   } catch (error) {

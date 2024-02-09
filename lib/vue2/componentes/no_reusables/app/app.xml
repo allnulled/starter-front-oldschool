@@ -1,4 +1,4 @@
-<div>
+<div id="app">
+    <mis-dialogos />
     <pagina-de-inicio></pagina-de-inicio>
-    <mi-button>{{ $t("Hola") }}</mi-button>
 </div>
