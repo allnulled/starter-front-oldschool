@@ -24,7 +24,7 @@ Proyecto starter para aplicaciones basadas en tecnología web HTML5.
 - Estilos dinámicos basados en EJS con los nuevos ficheros `*.jcss`.
 - Kit de componentes básicos personalizables.
 - Orientado a la programación funcional y modular.
-- Con toda
+- 
 
 ## Librerías externas
 
@@ -46,7 +46,13 @@ Si además quieres usar el `reloader.js` que es para detectar cambios y refresca
 npm install
 ```
 
-Se instalarán algunas dependencias, como nodemon, socket.io o express, y de ahí el cliente ya se conectará solo.
+Se instalarán algunas dependencias, como chokidar, socket.io o express. Luego tienes que encender el servidor para escuchar los cambios en los ficheros, y notificárselo al cliente para que refresque automáticamente.
+
+```
+node reloader.js
+```
+
+Y de ahí el cliente ya se conectará automáticamente, siempre que detecte que está en entorno de `NODE_ENV=test`.
 
 ## Uso
 
