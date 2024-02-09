@@ -17,6 +17,8 @@ Proyecto starter para aplicaciones basadas en tecnología web HTML5.
 - Sistema de fechas. Para pasar de texto a fecha y viceversa fácilmente.
 - Sistema de hooks. Para esparcir ganchos programáticos por la aplicación, y futuro soporte de plugins.
 - Sistema de rutas. Para definir las rutas de la aplicación. Vía vue-router.
+- Sistema de diálogos. Para gestionar diálogos rápidamente.
+- Sistema de plantillas. Para usar EJS de forma estandarizada.
 - Componentes con vue (versión 2).
 - Internacionalización con vue-i18n.
 - Routing con vue-router.
@@ -24,7 +26,11 @@ Proyecto starter para aplicaciones basadas en tecnología web HTML5.
 - Estilos dinámicos basados en EJS con los nuevos ficheros `*.jcss`.
 - Kit de componentes básicos personalizables.
 - Orientado a la programación funcional y modular.
-- 
+- Con refresco automático del navegador. Para no perder ni un segundo en tus desarrollos.
+- Con payload en el refresco. Para emplazarte automáticamente en la parte de la aplicación que estás desarrollando.
+- Permite carga de lógicas y estilos condicionalmente. Para cargar lógica dinámicamente, basándose en variables, etc.
+- Fácil de comprender.
+- Fácil de extender.
 
 ## Librerías externas
 
