@@ -22,6 +22,7 @@ const main = async function() {
     await Sistema_de_modulos.cargar_script("lib/sistema_de_almacenamiento_sincronizable/sistema_de_almacenamiento_sincronizable.js");
     await Sistema_de_modulos.cargar_script("lib/utilidades_de_texto/utilidades_de_texto.js");
     await Sistema_de_modulos.cargar_script("lib/rutas/rutas.js");
+    await Sistema_de_modulos.cargar_script("lib/traducciones/traducciones.js");
 
     // COMPONENTES GRÁFICOS:
     await Sistema_de_modulos.cargar_script("lib/vue2/componentes/reusables/mi_button/mi_button.js");
@@ -40,8 +41,8 @@ const main = async function() {
     await Sistema_de_modulos.cargar_script("lib/vue2/componentes/reusables/mi_textarea/mi_textarea.js");
     await Sistema_de_modulos.cargar_script("lib/vue2/componentes/reusables/mi_timepicker/mi_timepicker.js");
     await Sistema_de_modulos.cargar_script("lib/vue2/componentes/reusables/mi_title/mi_title.js");
-    await Sistema_de_modulos.cargar_script("lib/vue2/componentes/no_reusables/app/app.js");
-    await Sistema_de_modulos.cargar_script("lib/vue2/componentes/no_reusables/pagina_de_inicio/pagina_de_inicio.js");
+    await Sistema_de_modulos.cargar_script_como_texto("lib/vue2/componentes/no_reusables/app/app.js");
+    await Sistema_de_modulos.cargar_script_como_texto("lib/vue2/componentes/no_reusables/pagina_de_inicio/pagina_de_inicio.js");
 
     // ESTILOS:
     await Sistema_de_modulos.cargar_estilo("lib/win7/win7.css");
