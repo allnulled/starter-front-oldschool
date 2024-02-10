@@ -1,4 +1,4 @@
-# starter-front-oldschool
+![Starter_front_oldschool](./docs/starter-front-oldschool.png)
 
 Proyecto starter para aplicaciones basadas en tecnología web HTML5.
 
